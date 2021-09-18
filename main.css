@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM%20Plex%20Sans:wght@400;500;600;700");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transition: background-color 1s ease-out;
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.panel {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+section:not(.first) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.panel.align-top {
+  align-items: flex-start;
+}
+
+.slider {
+  width: 16em;
+  position: fixed;
+  top: 100px;
+  left: calc(40% - 8em);
+  z-index: 3;
+}
+
+.slider svg {
+  border-radius: 50%;
+  transition: background-color 1s ease-out;
+}
+
+.slider .head {
+  position: relative;
+  top: 11em;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100px;
+}
+
+.slider .head h1 {
+  font-size: 2.5em;
+}
+
+.slider .head h4 {
+  font-size: 1.2em;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  align-items: center;
+  padding: 3em;
+  z-index: 2;
+}
+
+.content .text h2 {
+  font-size: 2em;
+  line-height: 3em;
+}
+
+.content .foot {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-top: 1em;
+}
+
+.content .foot p:nth-child(2) {
+  text-align: right;
+}
+
+.images {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#slide1 .images {
+  background: #cdcbcf;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 15%;
+}
+
+#slide2 .images {
+  background: #1c0360;
+}
+
+#slide3 .images {
+  background: #141547;
+}
+
+#slide4 .images {
+  background: #0e131c;
+}
+
+#slide5 .images {
+  background: #23cfeb;
+}
+
+#slide6 .images {
+  background: url("./images/interior.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slide7 .images {
+  background: #01b76a;
+}
+
+#slide1 img,
+#slide6 img {
+  margin-top: 200px;
+}
+
+#slide1 img {
+  width: 100%;
+}
+
+#slide2 img:nth-child(1) {
+  width: 20%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: -200px;
+}
+
+#slide2 img:nth-child(2) {
+  position: absolute;
+  width: 20%;
+  top: 0;
+  right: 10%;
+  margin-top: -200px;
+}
+
+#slide3 img:nth-child(1) {
+  width: 20%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: -200px;
+}
+
+#slide3 img:nth-child(2) {
+  position: absolute;
+  width: 20%;
+  top: 0;
+  right: 10%;
+  margin-top: -350px;
+}
+
+#slide4 img:nth-child(1) {
+  width: 15%;
+  position: absolute;
+  left: 40%;
+  top: 0;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+#slide4 img:nth-child(2) {
+  position: absolute;
+  width: 17%;
+  top: 15%;
+  right: 15%;
+  margin-top: -200px;
+}
+
+#slide4 img:nth-child(3) {
+  width: 12%;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  margin-top: -400px;
+}
+
+#slide4 img:nth-child(4) {
+  position: absolute;
+  width: 17%;
+  bottom: 0;
+  left: 47%;
+  margin-bottom: -225px;
+}
+
+#slide4 img:nth-child(5) {
+  width: 20%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: -300px;
+  margin-right: -200px;
+}
+
+#slide5 img:nth-child(1) {
+  width: 15%;
+  position: absolute;
+  left: 47%;
+  top: 0;
+  margin-top: -325px;
+}
+
+#slide5 img:nth-child(2) {
+  position: absolute;
+  width: 15%;
+  top: 0;
+  right: 22%;
+  margin-top: -225px;
+}
+
+#slide5 img:nth-child(3) {
+  width: 15%;
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  margin-right: -200px;
+}
+
+#slide5 img:nth-child(4) {
+  position: absolute;
+  width: 15%;
+  bottom: 0;
+  left: 47%;
+  margin-bottom: -325px;
+}
+
+#slide5 img:nth-child(5) {
+  position: absolute;
+  width: 15%;
+  bottom: 0;
+  right: 22%;
+  margin-bottom: -425px;
+}
+
+#slide7 img:nth-child(1) {
+  width: 25%;
+  position: absolute;
+  left: 53%;
+  bottom: 0;
+  margin-bottom: -300px;
+  z-index: 6;
+}
+
+#slide7 img:nth-child(2) {
+  position: absolute;
+  width: 20%;
+  bottom: 0;
+  right: 10%;
+  margin-bottom: -250px;
+  z-index: 5;
+}
+
+.head .animates {
+  margin-top: -50px;
+  overflow: hidden;
+}
