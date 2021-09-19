@@ -37,16 +37,16 @@ document.getElementById("Opaque_Ring").style.strokeDasharray = "0 , 1000";
 document.querySelector(".dotsst").style.fill = "rgb(0, 155, 255)";
 document.querySelector(".dotsst").style.opacity = "1";
 
-gsap.to(document.querySelectorAll("#slide1 img")[0], {
+gsap.to(document.querySelectorAll(".panel #slide1 .images img")[0], {
   duration: 1,
   y: -200,
 });
-gsap.to(document.querySelectorAll("#slide1 img")[1], {
+gsap.to(document.querySelectorAll(".panel #slide1 .images img")[1], {
   duration: 1,
   y: -200,
 });
 document.querySelector(".head .animates").innerHTML = colors[0].head;
-gsap.to(document.querySelector(".head .animates"), {
+gsap.to(".head .animates", {
   duration: 0.5,
   autoAlpha: 1,
   y: 50,
@@ -71,185 +71,185 @@ sections.forEach((section, i) => {
 function setSection(newSection) {
   if (newSection !== currentSection) {
     let index = sections.indexOf(newSection);
-    gsap.to(document.querySelectorAll("#slide1 img")[0], {
+    gsap.to(document.querySelectorAll("#slide1 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide1 img")[1], {
+    gsap.to(document.querySelectorAll("#slide1 .images img")[1], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide2 img")[0], {
+    gsap.to(document.querySelectorAll("#slide2 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide2 img")[1], {
+    gsap.to(document.querySelectorAll("#slide2 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide3 img")[0], {
+    gsap.to(document.querySelectorAll("#slide3 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide3 img")[1], {
+    gsap.to(document.querySelectorAll("#slide3 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide7 img")[0], {
+    gsap.to(document.querySelectorAll("#slide7 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide7 img")[1], {
+    gsap.to(document.querySelectorAll("#slide7 .images img")[1], {
       duration: 1.5,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide4 img")[0], {
+    gsap.to(document.querySelectorAll("#slide4 .images img")[0], {
       duration: 1,
       y: -200,
       x: -200,
     });
-    gsap.to(document.querySelectorAll("#slide4 img")[1], {
+    gsap.to(document.querySelectorAll("#slide4 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide4 img")[2], {
+    gsap.to(document.querySelectorAll("#slide4 .images img")[2], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide4 img")[3], {
+    gsap.to(document.querySelectorAll("#slide4 .images img")[3], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide4 img")[4], {
+    gsap.to(document.querySelectorAll("#slide4 .images img")[4], {
       duration: 1,
       y: 200,
       x: 200,
     });
-    gsap.to(document.querySelectorAll("#slide5 img")[0], {
+    gsap.to(document.querySelectorAll("#slide5 .images img")[0], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide5 img")[1], {
+    gsap.to(document.querySelectorAll("#slide5 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide5 img")[2], {
+    gsap.to(document.querySelectorAll("#slide5 .images img")[2], {
       duration: 1,
       x: 200,
     });
-    gsap.to(document.querySelectorAll("#slide5 img")[3], {
+    gsap.to(document.querySelectorAll("#slide5 .images img")[3], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide5 img")[4], {
+    gsap.to(document.querySelectorAll("#slide5 .images img")[4], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelector("#slide6 img"), {
+    gsap.to("#slide6 .images img", {
       duration: 1,
       y: 200,
     });
     gsap.to(currentSection, { duration: 1, autoAlpha: 0 });
     gsap.to(newSection, { duration: 1, autoAlpha: 1 });
     if (index == 0) {
-      gsap.to(newSection.querySelectorAll("img")[0], {
+      gsap.to(newSection.querySelectorAll(".images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll("img")[1], {
+      gsap.to(newSection.querySelectorAll(".images img")[1], {
         duration: 1,
         y: -200,
       });
     } else if (index == 1) {
-      gsap.to(newSection.querySelectorAll("img")[0], {
+      gsap.to(newSection.querySelectorAll(".images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll("img")[1], {
+      gsap.to(newSection.querySelectorAll(".images img")[1], {
         duration: 1,
         y: 200,
       });
     } else if (index == 2) {
-      gsap.to(newSection.querySelectorAll("img")[0], {
+      gsap.to(newSection.querySelectorAll(".images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll("img")[1], {
+      gsap.to(newSection.querySelectorAll(".images img")[1], {
         duration: 1,
         y: 200,
       });
     } else if (index == 3) {
-      gsap.to(document.querySelectorAll("#slide4 img")[0], {
+      gsap.to(newSection.querySelectorAll(".images img")[0], {
         duration: 1,
         y: 200,
         x: 200,
       });
-      gsap.to(document.querySelectorAll("#slide4 img")[1], {
+      gsap.to(newSection.querySelectorAll(".images img")[1], {
         duration: 1,
         y: 200,
       });
-      gsap.to(document.querySelectorAll("#slide4 img")[2], {
+      gsap.to(newSection.querySelectorAll(".images img")[2], {
         duration: 1,
         y: 200,
       });
-      gsap.to(document.querySelectorAll("#slide4 img")[3], {
+      gsap.to(newSection.querySelectorAll(".images img")[3], {
         duration: 1,
         y: -200,
       });
-      gsap.to(document.querySelectorAll("#slide4 img")[4], {
+      gsap.to(newSection.querySelectorAll(".images img")[4], {
         duration: 1,
         y: -200,
         x: -200,
       });
     } else if (index == 4) {
-      gsap.to(document.querySelectorAll("#slide5 img")[0], {
+      gsap.to(newSection.querySelectorAll(".images img")[0], {
         duration: 1,
         y: 200,
       });
-      gsap.to(document.querySelectorAll("#slide5 img")[1], {
+      gsap.to(newSection.querySelectorAll(".images img")[1], {
         duration: 1,
         y: 200,
       });
-      gsap.to(document.querySelectorAll("#slide5 img")[2], {
+      gsap.to(newSection.querySelectorAll(".images img")[2], {
         duration: 1,
         x: -200,
       });
-      gsap.to(document.querySelectorAll("#slide5 img")[3], {
+      gsap.to(newSection.querySelectorAll(".images img")[3], {
         duration: 1,
         y: -200,
       });
-      gsap.to(document.querySelectorAll("#slide5 img")[4], {
+      gsap.to(newSection.querySelectorAll(".images img")[4], {
         duration: 1,
         y: -200,
       });
     } else if (index == 5) {
-      gsap.to(newSection.querySelector("img"), {
+      gsap.to(newSection.querySelector(".images img"), {
         duration: 1,
         y: -200,
       });
     } else if (index == 6) {
-      gsap.to(newSection.querySelectorAll("img")[0], {
+      gsap.to(newSection.querySelectorAll(".images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll("img")[1], {
+      gsap.to(newSection.querySelectorAll(".images img")[1], {
         duration: 1.5,
         y: -200,
       });
     }
-    gsap.to(document.querySelector(".head .animates"), {
+    gsap.to(".head .animates", {
       y: 150,
       autoAlpha: 1,
       duration: 0.5,
       onComplete: () => {
-        gsap.to(document.querySelector(".head .animates"), {
+        gsap.to(".head .animates", {
           y: -150,
           autoAlpha: 0,
           duration: 0,
           onComplete: () => {
             document.querySelector(".head .animates").innerHTML =
               colors[index].head;
-            gsap.to(document.querySelector(".head .animates"), {
+            gsap.to(".head .animates", {
               y: 50,
               autoAlpha: 1,
               duration: 0.5,
@@ -288,3 +288,42 @@ ScrollTrigger.create({
   onLeaveBack: (self) => self.scroll(ScrollTrigger.maxScroll(window) - 2),
   onLeave: (self) => self.scroll(2),
 }).scroll(2);
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  nav: true,
+  margin: 0,
+  responsive: {
+    0: {
+      items: 1,
+    },
+  },
+  autoplay: true,
+  autoplayTimeout: 10000,
+});
+
+$(".owl-carousel").on("changed.owl.carousel", function (event) {
+  console.log(event.page.index);
+  document.querySelector(".owl-carousel").style.backgroundColor =
+    colors[event.page.index].backgroundColor;
+});
+
+if (window.innerWidth < 720) {
+  window.scrollTo(0, 0);
+  document.body.style.overflow = "hidden";
+  document.querySelector(".owl-carousel").style.backgroundColor =
+    colors[0].backgroundColor;
+}
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 720) {
+    window.scrollTo(0, 0);
+    document.body.style.overflow = "hidden";
+    document.querySelector(".owl-carousel").style.backgroundColor =
+      colors[0].backgroundColor;
+  } else {
+    if (document.body.style.overflow == "hidden") {
+      document.body.style.overflow = "auto";
+    }
+  }
+});
