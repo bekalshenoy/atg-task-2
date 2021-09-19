@@ -3,31 +3,31 @@ let sections = gsap.utils.toArray("section"),
 let colors = [
   {
     backgroundColor: "#6411a9",
-    head: "<h4>Sub Heading1</h4><h1>Heading1</h1><p>Details1</p>",
+    head: "<h1>25M+ Downloads</h1><p style='text-align: right'>on appstore & google playstore</p>",
   },
   {
     backgroundColor: "#4e27ce",
-    head: "<h4>Sub Heading2</h4><h1>Heading2</h1><p>Details2</p>",
+    head: "<h4>The Next Big</h4><h1>Blockchain</h1><p style='text-align: right'>Revolution</p>",
   },
   {
     backgroundColor: "#0f113b",
-    head: "<h4>Sub Heading3</h4><h1>Heading3</h1><p>Details3</p>",
+    head: "<h4>Powered by advanced</h4><img src='./images/nasa-mobile-app.png' style='height:60px;' alt='nasa' /><p style='text-align: right'>algorithms</p>",
   },
   {
     backgroundColor: "#17263c",
-    head: "<h4>Sub Heading4</h4><h1>Heading4</h1><p>Details4</p>",
+    head: "<h4>Redefining</h4><h1>UX Strategy</h1><p style='text-align: right'>and UI design</p>",
   },
   {
     backgroundColor: "#134ca2",
-    head: "<h4>Sub Heading5</h4><h1>Heading5</h1><p>Details5</p>",
+    head: "<h4>Text Headline</h4><h1>Text Headline</h1><p style='text-align: right'>Footer headline</p>",
   },
   {
     backgroundColor: "#022b92",
-    head: "<h4>Sub Heading6</h4><h1>Heading6</h1><p>Details6</p>",
+    head: "<h4>Developing ERP Solutions for</h4><h1>Text Headline</h1><p style='text-align: right'>in furniture industry</p>",
   },
   {
     backgroundColor: "#01824d",
-    head: "<h4>Sub Heading7</h4><h1>Heading7</h1><p>Details7</p>",
+    head: "<h4>Biggest Classifieds</h4><h1>East Asia</h1><p style='text-align: right'>Countries</p>",
   },
 ];
 
@@ -317,7 +317,7 @@ $(".owl-carousel").on("changed.owl.carousel", function (event) {
   } catch {}
 });
 
-if (window.innerWidth < 500) {
+if (window.innerWidth < 600) {
   window.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
   document.querySelector(".owl-carousel").style.backgroundColor =
@@ -328,7 +328,7 @@ if (window.innerWidth < 500) {
 }
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth < 500) {
+  if (window.innerWidth < 600) {
     window.scrollTo(0, 0);
     document.body.style.overflow = "hidden";
     document.querySelector(".owl-carousel").style.backgroundColor =
