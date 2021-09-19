@@ -65,6 +65,11 @@ section:not(.first) {
   font-size: 1.2em;
 }
 
+.content .text {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 .com .content {
   height: 100vh;
   width: 100%;
@@ -82,6 +87,10 @@ section:not(.first) {
 .content h2 {
   font-size: 2em;
   line-height: 3em;
+}
+
+.content .text p {
+  margin-top: 25px;
 }
 
 .com .content .foot {
@@ -283,7 +292,7 @@ section:not(.first) {
 
 .owl-carousel {
   height: 100vh;
-  background: #000;
+  background: #fff;
   display: none !important;
 }
 
@@ -291,16 +300,92 @@ section:not(.first) {
   width: 100%;
   height: calc(100vh - 100px);
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 60% 40%;
 }
 
 .owl-carousel .images {
-  height: 50vh;
+  height: 60vh;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1366px) {
+  .panel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .slider {
+    width: 16em;
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 8em);
+    z-index: 3;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+  .slider {
+    width: 10em;
+    position: fixed;
+    top: 25px;
+    left: calc(50% - 5em);
+    z-index: 3;
+  }
+
+  .slider .head h1 {
+    font-size: 1.75em;
+  }
+
+  .slider .head h4 {
+    font-size: 1em;
+  }
+
+  .slider .head p {
+    font-size: 0.75em;
+  }
+
+  .content h2 {
+    font-size: 1.3em;
+    line-height: 2em;
+  }
+
+  .content p {
+    font-size: 0.75em;
+  }
+
+  .com .content {
+    padding: 2em 2em;
+  }
+
+  .com .content .text img {
+    height: 60px !important;
+  }
+
+  .com .content .foot {
+    padding-top: 0;
+  }
+
+  .com .content .text {
+    margin: 1em 0;
+  }
+
+  .slider .head {
+    position: relative;
+    top: 7.5em;
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .owl-carousel {
     display: block !important;
+  }
+
+  .owl-carousel .content img {
+    position: absolute;
+    top: calc(60% + 20px);
+    z-index: 6;
+    border: 2px solid transparent;
+    border-radius: 8px;
   }
 
   .com {
@@ -391,6 +476,28 @@ section:not(.first) {
   }
 
   .content {
-    margin: 4em;
+    margin: 2em;
+    margin-top: 8em;
+  }
+
+  .content h2 {
+    line-height: normal;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .owl-carousel .item {
+    display: grid;
+    grid-template-rows: 50% 50%;
+  }
+
+  .owl-carousel .images {
+    height: 50vh;
+  }
+
+  .owl-carousel .content img {
+    height: 60px !important;
+    position: absolute;
+    top: calc(50% + 30px);
   }
 }

@@ -37,11 +37,11 @@ document.getElementById("Opaque_Ring").style.strokeDasharray = "0 , 1000";
 document.querySelector(".dotsst").style.fill = "rgb(0, 155, 255)";
 document.querySelector(".dotsst").style.opacity = "1";
 
-gsap.to(document.querySelectorAll(".panel #slide1 .images img")[0], {
+gsap.to(document.querySelectorAll(".com #slide1 .images img")[0], {
   duration: 1,
   y: -200,
 });
-gsap.to(document.querySelectorAll(".panel #slide1 .images img")[1], {
+gsap.to(document.querySelectorAll(".com #slide1 .images img")[1], {
   duration: 1,
   y: -200,
 });
@@ -71,168 +71,173 @@ sections.forEach((section, i) => {
 function setSection(newSection) {
   if (newSection !== currentSection) {
     let index = sections.indexOf(newSection);
-    gsap.to(document.querySelectorAll("#slide1 .images img")[0], {
+    gsap.to(document.querySelectorAll(".com #slide1 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide1 .images img")[1], {
+    gsap.to(document.querySelectorAll(".com #slide1 .images img")[1], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide2 .images img")[0], {
+    gsap.to(document.querySelectorAll(".com #slide2 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide2 .images img")[1], {
+    gsap.to(document.querySelectorAll(".com #slide2 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide3 .images img")[0], {
+    gsap.to(document.querySelectorAll(".com #slide3 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide3 .images img")[1], {
+    gsap.to(document.querySelectorAll(".com #slide3 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide7 .images img")[0], {
+    gsap.to(document.querySelectorAll(".com #slide7 .images img")[0], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide7 .images img")[1], {
+    gsap.to(document.querySelectorAll(".com #slide7 .images img")[1], {
       duration: 1.5,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide4 .images img")[0], {
+    gsap.to(document.querySelectorAll(".com #slide4 .images img")[0], {
       duration: 1,
       y: -200,
       x: -200,
     });
-    gsap.to(document.querySelectorAll("#slide4 .images img")[1], {
+    gsap.to(document.querySelectorAll(".com #slide4 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide4 .images img")[2], {
+    gsap.to(document.querySelectorAll(".com #slide4 .images img")[2], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide4 .images img")[3], {
+    gsap.to(document.querySelectorAll(".com #slide4 .images img")[3], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide4 .images img")[4], {
+    gsap.to(document.querySelectorAll(".com #slide4 .images img")[4], {
       duration: 1,
       y: 200,
       x: 200,
     });
-    gsap.to(document.querySelectorAll("#slide5 .images img")[0], {
+    gsap.to(document.querySelectorAll(".com #slide5 .images img")[0], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide5 .images img")[1], {
+    gsap.to(document.querySelectorAll(".com #slide5 .images img")[1], {
       duration: 1,
       y: -200,
     });
-    gsap.to(document.querySelectorAll("#slide5 .images img")[2], {
+    gsap.to(document.querySelectorAll(".com #slide5 .images img")[2], {
       duration: 1,
       x: 200,
     });
-    gsap.to(document.querySelectorAll("#slide5 .images img")[3], {
+    gsap.to(document.querySelectorAll(".com #slide5 .images img")[3], {
       duration: 1,
       y: 200,
     });
-    gsap.to(document.querySelectorAll("#slide5 .images img")[4], {
+    gsap.to(document.querySelectorAll(".com #slide5 .images img")[4], {
       duration: 1,
       y: 200,
     });
-    gsap.to("#slide6 .images img", {
+    gsap.to(".com #slide6 .images img", {
       duration: 1,
       y: 200,
+    });
+    gsap.to(currentSection.querySelector(".text p"), 1, {
+      autoAlpha: 0,
+      y: 25,
     });
     gsap.to(currentSection, { duration: 1, autoAlpha: 0 });
     gsap.to(newSection, { duration: 1, autoAlpha: 1 });
+    gsap.to(newSection.querySelector(".text p"), 1, { autoAlpha: 1, y: -25 });
     if (index == 0) {
-      gsap.to(newSection.querySelectorAll(".images img")[0], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[1], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[1], {
         duration: 1,
         y: -200,
       });
     } else if (index == 1) {
-      gsap.to(newSection.querySelectorAll(".images img")[0], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[1], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[1], {
         duration: 1,
         y: 200,
       });
     } else if (index == 2) {
-      gsap.to(newSection.querySelectorAll(".images img")[0], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[1], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[1], {
         duration: 1,
         y: 200,
       });
     } else if (index == 3) {
-      gsap.to(newSection.querySelectorAll(".images img")[0], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[0], {
         duration: 1,
         y: 200,
         x: 200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[1], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[1], {
         duration: 1,
         y: 200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[2], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[2], {
         duration: 1,
         y: 200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[3], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[3], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[4], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[4], {
         duration: 1,
         y: -200,
         x: -200,
       });
     } else if (index == 4) {
-      gsap.to(newSection.querySelectorAll(".images img")[0], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[0], {
         duration: 1,
         y: 200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[1], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[1], {
         duration: 1,
         y: 200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[2], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[2], {
         duration: 1,
         x: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[3], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[3], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[4], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[4], {
         duration: 1,
         y: -200,
       });
     } else if (index == 5) {
-      gsap.to(newSection.querySelector(".images img"), {
+      gsap.to(newSection.querySelector(".com .images img"), {
         duration: 1,
         y: -200,
       });
     } else if (index == 6) {
-      gsap.to(newSection.querySelectorAll(".images img")[0], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[0], {
         duration: 1,
         y: -200,
       });
-      gsap.to(newSection.querySelectorAll(".images img")[1], {
+      gsap.to(newSection.querySelectorAll(".com .images img")[1], {
         duration: 1.5,
         y: -200,
       });
@@ -299,28 +304,38 @@ $(".owl-carousel").owlCarousel({
     },
   },
   autoplay: true,
-  autoplayTimeout: 10000,
+  autoplayTimeout: 5000,
 });
 
 $(".owl-carousel").on("changed.owl.carousel", function (event) {
-  console.log(event.page.index);
   document.querySelector(".owl-carousel").style.backgroundColor =
     colors[event.page.index].backgroundColor;
+  try {
+    document.querySelectorAll(".owl-carousel .content img")[
+      event.page.index
+    ].style.backgroundColor = colors[event.page.index].backgroundColor;
+  } catch {}
 });
 
-if (window.innerWidth < 720) {
+if (window.innerWidth < 500) {
   window.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
   document.querySelector(".owl-carousel").style.backgroundColor =
     colors[0].backgroundColor;
+  document.querySelectorAll(
+    ".owl-carousel .content img"
+  )[0].style.backgroundColor = colors[0].backgroundColor;
 }
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth < 720) {
+  if (window.innerWidth < 500) {
     window.scrollTo(0, 0);
     document.body.style.overflow = "hidden";
     document.querySelector(".owl-carousel").style.backgroundColor =
       colors[0].backgroundColor;
+    document.querySelectorAll(
+      ".owl-carousel .content img"
+    )[0].style.backgroundColor = colors[0].backgroundColor;
   } else {
     if (document.body.style.overflow == "hidden") {
       document.body.style.overflow = "auto";
